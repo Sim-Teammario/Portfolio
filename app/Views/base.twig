@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/diplomes">Diplômes</a>
+            <a href="/projets">Projets</a>
+            <a href="/a-propos">À propos</a>
+            <a href="/actuellement">Actuellement</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% if session.flash %}
+            <div class="alert">{{ session.flash }}</div>
+            {% set _ = session.flash %} {# clear flash #}
+        {% endif %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <a href="/mentions-legales">Mentions Légales</a> | 
+        <a href="/politique-confidentialite">Politique de Confidentialité</a>
+    </footer>
+
+    {% if not cookie_consent %}
+    <div id="cookie-banner" class="banner">
+        <p>Nous utilisons des cookies fonctionnels et de statistiques (pseudonymisées) pour améliorer votre expérience. <a href="/politique-confidentialite">En savoir plus</a>.</p>
+        <button id="accept-cookies">Accepter</button>
+        <button id="refuse-cookies">Refuser</button>
+    </div>
+    {% endif %}
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
