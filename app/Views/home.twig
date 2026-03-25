@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+{% block title %}Accueil - Portfolio SysAdmin{% endblock %}
+{% block content %}
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <p>Alternant Administrateur Systèmes & Réseaux. Objectif : Ingénieur DevOps.</p>
+    
+    {% if cookie_consent %}
+        <a href="/cv/download" class="btn">Télécharger mon CV</a>
+    {% else %}
+        <p><em>Veuillez accepter la politique de confidentialité pour télécharger le CV.</em></p>
+    {% endif %}
+{% endblock %}
