@@ -14,7 +14,7 @@ $dotenv->safeLoad();
 // Initialiser Twig
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../app/Views');
 $twig = new \Twig\Environment($loader, [
-    'cache' => $_ENV['APP_ENV'] === 'production' ? __DIR__ . '/../templates' : false,
+    'cache' => $_ENV['APP_ENV'] === 'production' ? __DIR__ . '/../var/cache' : false,
 ]);
 
 $twig->addGlobal('session', $_SESSION);
