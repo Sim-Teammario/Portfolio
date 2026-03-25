@@ -1,0 +1,19 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --primary-color: #0056b3;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+header { background: var(--primary-color); padding: 1rem; }
+nav { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+nav a { color: #fff; text-decoration: none; font-weight: bold; }
+main { padding: 2rem; max-width: 800px; margin: auto; }
+.btn { display: inline-block; padding: 0.5rem 1rem; background: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
+form div { margin-bottom: 1rem; }
+form label { display: block; margin-bottom: 0.5rem; }
+form input, form textarea { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+.banner { position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 1rem; text-align: center; }
+.banner button { margin: 0 0.5rem; padding: 0.5rem; cursor: pointer; }
+.alert { background: #d4edda; color: #155724; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; }
+footer { text-align: center; padding: 1rem; margin-top: 2rem; font-size: 0.9rem; }
