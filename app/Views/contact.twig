@@ -2,6 +2,32 @@
 {% block title %}Contact{% endblock %}
 {% block content %}
     <h1>Contactez-moi</h1>
+    <p>
+        Vous pouvez aussi me contacter sur
+        <a href="https://fr.linkedin.com/in/simon-taveirne" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+    </p>
+
+    <section class="maintenance-contact" aria-labelledby="maintenance-title">
+        <div class="maintenance-stripe maintenance-stripe-top" aria-hidden="true">EN MAINTENANCE • EN MAINTENANCE • EN MAINTENANCE</div>
+        <div class="maintenance-stripe maintenance-stripe-bottom" aria-hidden="true">EN MAINTENANCE • EN MAINTENANCE • EN MAINTENANCE</div>
+
+        <div class="maintenance-panel">
+            <h2 id="maintenance-title">Formulaire de contact en maintenance</h2>
+            <p>Le formulaire est temporairement desactive. Merci de passer par LinkedIn pour me joindre.</p>
+
+            <div class="maintenance-form-mock" aria-hidden="true">
+                <label>Nom</label>
+                <input type="text" placeholder="Indisponible" disabled>
+                <label>Email</label>
+                <input type="email" placeholder="Indisponible" disabled>
+                <label>Message</label>
+                <textarea placeholder="Indisponible" disabled></textarea>
+                <button class="btn" type="button" disabled>Envoyer (indisponible)</button>
+            </div>
+        </div>
+    </section>
+
+    {#
     <form action="/contact/submit" method="POST">
         <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
         <div>
@@ -18,4 +44,5 @@
         </div>
         <button type="submit" class="btn">Envoyer</button>
     </form>
+    #}
 {% endblock %}

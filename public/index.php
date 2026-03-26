@@ -17,7 +17,12 @@ $twig = new \Twig\Environment($loader, [
     'cache' => $_ENV['APP_ENV'] === 'production' ? __DIR__ . '/../var/cache' : false,
 ]);
 
+// Consume flash once per request to avoid persistent alerts on every page.
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);
+
 $twig->addGlobal('session', $_SESSION);
+$twig->addGlobal('flash', $flash);
 $twig->addGlobal('cookie_consent', $_COOKIE['rgpd_consent'] ?? false);
 
 // Routeur simple

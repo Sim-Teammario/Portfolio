@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Portfolio{% endblock %}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260326-2">
 </head>
 <body>
     <header>
@@ -19,17 +19,21 @@
     </header>
 
     <main>
-        {% if session.flash %}
-            <div class="alert">{{ session.flash }}</div>
-            {% set _ = session.flash %} {# clear flash #}
+        {% if flash %}
+            <div class="alert">{{ flash }}</div>
         {% endif %}
         
         {% block content %}{% endblock %}
     </main>
 
-    <footer>
-        <a href="/mentions-legales">Mentions Légales</a> | 
-        <a href="/politique-confidentialite">Politique de Confidentialité</a>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-links">
+                <a href="/mentions-legales">Mentions Légales</a>
+                <span aria-hidden="true">•</span>
+                <a href="/politique-confidentialite">Politique de Confidentialité</a>
+            </p>
+        </div>
     </footer>
 
     {% if not cookie_consent %}
