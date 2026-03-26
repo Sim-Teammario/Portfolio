@@ -31,6 +31,11 @@ class PageController {
         ]);
     }
 
-    public function mentions() { echo $this->twig->render('page.twig', ['title' => 'Mentions Légales', 'content' => 'Texte des mentions légales...']); }
-    public function privacy() { echo $this->twig->render('page.twig', ['title' => 'Politique de confidentialité', 'content' => 'Texte de la politique RGPD...']); }
+    public function mentions() {
+        echo $this->twig->render('mentions.twig');
+    }
+
+    public function privacy() {
+        echo $this->twig->render('privacy.twig');
+    }
 }
