@@ -8,6 +8,9 @@
 # Portfolio local pictures
 public/assets/pictures/
 
+# Mon CV
+public/files/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -401,3 +404,4 @@ composer.lock
 
 # Runtime cache
 var/cache/
+
