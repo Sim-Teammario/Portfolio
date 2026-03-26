@@ -1,9 +1,24 @@
 {% extends 'base.twig' %}
 {% block title %}Accueil - Portfolio SysAdmin{% endblock %}
 {% block content %}
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <p>Alternant Administrateur Systèmes & Réseaux. Objectif : Ingénieur DevOps.</p>
-    
+    <section class="home-hero" aria-label="Présentation">
+        <div class="profile-bubble-wrap">
+            <img class="profile-bubble" src="/assets/pictures/tete.jpeg" alt="Photo de profil de Sim">
+            <span class="status-pill profile-status-pill" title="{{ status_description }}">{{ status_label }}</span>
+        </div>
+
+        <div class="home-hero-text">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <h2>Administrateur d’infrastructures sécurisées</h2>
+            <p>Je conçois, maintiens et sécurise des environnements systèmes et infrastructures.<br>
+            Vous trouverez ici une présentation de mon parcours, de mes projets et de mes coordonnées.</p>
+            <p>
+                Titre RNCP niveau 6 —
+                <a href="{{ rncp_url }}" target="_blank" rel="noopener noreferrer">Administrateur d’infrastructures sécurisées</a>.
+            </p>
+        </div>
+    </section>
+
     {% if cookie_consent %}
         <a href="/cv/download" class="btn">Télécharger mon CV</a>
     {% else %}

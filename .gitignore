@@ -5,6 +5,9 @@
 *.userosscache
 *.sln.docstates
 
+# Portfolio local pictures
+public/assets/pictures/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

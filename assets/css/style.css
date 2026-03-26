@@ -53,6 +53,80 @@ main {
 .btn:hover {
     background: var(--primary-color-dark);
 }
+
+.status-pill {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(31, 41, 55, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.home-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.3rem;
+    margin-bottom: 1.1rem;
+}
+
+.profile-bubble-wrap {
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: 0.2rem;
+}
+
+.profile-bubble {
+    width: 148px;
+    height: 148px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 26px rgba(17, 24, 39, 0.2);
+    display: block;
+}
+
+.profile-status-pill {
+    position: absolute;
+    right: -10px;
+    bottom: -8px;
+    font-size: 0.78rem;
+    padding: 0.28rem 0.62rem;
+    background: rgba(250, 252, 255, 0.97);
+}
+
+.home-hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-hero-text h1,
+.home-hero-text h2 {
+    margin-bottom: 0.35rem;
+}
+
+.home-hero-text p {
+    margin-bottom: 0.55rem;
+}
+
+.content-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(31, 41, 55, 0.18);
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.content-card h2 {
+    font-size: 1.08rem;
+    margin-bottom: 0.6rem;
+}
+
+.status-text {
+    margin-top: 0.8rem;
+    font-weight: 600;
+}
 form div { margin-bottom: 1rem; }
 form label { display: block; margin-bottom: 0.5rem; }
 form input, form textarea {
@@ -167,6 +241,23 @@ footer a,
 @media (max-width: 640px) {
     main {
         padding: 1rem 0.85rem 1.6rem;
+    }
+
+    .home-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.9rem;
+    }
+
+    .profile-bubble {
+        width: 126px;
+        height: 126px;
+    }
+
+    .profile-status-pill {
+        right: -6px;
+        bottom: -6px;
     }
 
     .maintenance-stripe-top {

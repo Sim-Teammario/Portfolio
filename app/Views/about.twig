@@ -1,0 +1,10 @@
+{% extends 'base.twig' %}
+{% block title %}À propos{% endblock %}
+{% block content %}
+    <h1>À propos</h1>
+    <p>Passionné par les environnements systèmes et les infrastructures, j’aime comprendre comment les choses fonctionnent, les optimiser et les sécuriser.</p>
+    <p>Mon travail s’oriente autour de la fiabilité, de la supervision et de la résolution d’incidents.</p>
+    <p>J’apprécie particulièrement les environnements Linux, l’automatisation de tâches récurrentes et la mise en place de pratiques de sécurité opérationnelle.</p>
+    <p>Je poursuis mon évolution vers un niveau bac +5 dans le domaine des infrastructures et de la cybersécurité.</p>
+    <p class="status-text" title="{{ status_label }}">{{ status_description }}</p>
+{% endblock %}
